@@ -3,7 +3,7 @@ module.exports = {
   // 则查找.eslintrc.js文件会失败，且eslint检查也不会生效
   root: true,
   env: {
-    browser: true,
+    // browser: true,
     node: true, // 添加对 Node.js 全局变量和作用域的支持
     es6: true
   },

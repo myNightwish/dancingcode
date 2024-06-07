@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 // import MeUI from '../src/index';
-import MeUI from '../lib/me-vue-ui.common.js';
-
+// import MeUI from '../lib/me-vue-ui.common.js';
+// 发包后：
+import MeUI from 'me-element-ui';
 import router from './router.js';
 
 import hljs from 'highlight.js';
