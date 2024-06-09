@@ -1,22 +1,22 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/test">Doc</router-link>
+    <div id="app">
+        <div id="nav">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/test">Doc</router-link>
+        </div>
+        <router-view />
     </div>
-    <router-view />
-  </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+    name: 'App'
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir;
-  color: #2c3e50;
+    font-family: Avenir;
+    color: #2c3e50;
 }
 </style>

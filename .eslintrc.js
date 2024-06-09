@@ -21,6 +21,12 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/multi-word-component-names': 'off', // 不校验组件名
-    'vue/no-multiple-template-root': 0 // 不需要使用根元素包裹template的内容
+    'vue/no-multiple-template-root': 0, // 不需要使用根元素包裹template的内容
+    'prettier/prettier': [
+      'off',
+      {
+        trailingComma: 'none' // 不添加尾随逗号
+      }
+    ]
   }
 };

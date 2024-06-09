@@ -1,6 +1,6 @@
 # 忽略构建生成的工件:
-build
 coverage
+node_modules
 
 # 如果忽略所有文件: 
 *.html

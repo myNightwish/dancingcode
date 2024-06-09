@@ -4,16 +4,16 @@
 
 ```html
 <template>
-  <me-loading :loading-text="text"></me-loading>
+    <me-loading :loading-text="text"></me-loading>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        text: '页面加载中……'
-      };
-    }
-  };
+    export default {
+        data() {
+            return {
+                text: '页面加载中……'
+            };
+        }
+    };
 </script>
 ```
 
