@@ -25,7 +25,8 @@ module.exports = {
     'prettier/prettier': [
       'off',
       {
-        trailingComma: 'none' // 不添加尾随逗号
+        trailingComma: 'none', // 不添加尾随逗号
+        singleQuote: true, // 单引号
       }
     ]
   }

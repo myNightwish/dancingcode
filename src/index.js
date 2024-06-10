@@ -1,9 +1,10 @@
 import Loading from '../packages/loading/index.js';
 import MiIcon from '../packages/icon/index.js';
-import MiIconScss from '../packages/theme-chalk/src/index.scss';
+import MiButton from '../packages/button/index.js';
+import MiButtonGroup from '../packages/button-group/index.js';
 
 // 导入组件库所有组件
-const components = [Loading, MiIcon];
+const components = [Loading, MiIcon, MiButton, MiButtonGroup];
 
 // 定义组件库组件注册安装的install方法
 // 如果使用 use 注册插件，则所有的组件都将被注册
@@ -30,5 +31,6 @@ export default {
     // 具体的组件列表
     Loading,
     MiIcon,
-    MiIconScss
+    MiButton,
+    MiButtonGroup
 };

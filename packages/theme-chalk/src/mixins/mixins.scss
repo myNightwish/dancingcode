@@ -1,0 +1,37 @@
+// 表示导入当前目录下的名为 "function" 的样式文件。在 Sass 中，默认会自动查找并导入同名的 .scss 或 .sass 文件
+// 如果文件路径未指定文件扩展名，则 Sass 会按照一定的规则搜索符合条件的文件。
+@import 'function';
+@import '../common/var';
+/* BEM
+ -------------------------- */
+@mixin b($block) {
+    $B: $namespace + '-' + $block !global;
+
+    .#{$B} {
+        @content;
+    }
+}
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: '';
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector +
+            & +
+            $modifier-separator +
+            $unit +
+            ','};
+    }
+
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}
+@mixin when($state) {
+    @at-root {
+        &.#{$state-prefix + $state} {
+            @content;
+        }
+    }
+}
