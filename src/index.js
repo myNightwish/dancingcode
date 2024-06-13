@@ -3,8 +3,17 @@ import MiIcon from '../packages/icon/index.js';
 import MiButton from '../packages/button/index.js';
 import MiButtonGroup from '../packages/button-group/index.js';
 
+import MiMain from '../packages/main/index.js';
+import MiHeader from '../packages/header/index.js';
+import MiFooter from '../packages/footer/index.js';
+import MiContainer from '../packages/container/index.js';
+import MiAside from '../packages/aside/index.js';
+
+
 // 导入组件库所有组件
-const components = [Loading, MiIcon, MiButton, MiButtonGroup];
+const components = [Loading, MiIcon, MiButton, MiButtonGroup,
+    MiMain, MiHeader, MiFooter, MiContainer, MiAside
+];
 
 // 定义组件库组件注册安装的install方法
 // 如果使用 use 注册插件，则所有的组件都将被注册
@@ -32,5 +41,10 @@ export default {
     Loading,
     MiIcon,
     MiButton,
-    MiButtonGroup
+    MiButtonGroup,
+    MiMain,
+    MiHeader,
+    MiFooter,
+    MiContainer,
+    MiAside
 };

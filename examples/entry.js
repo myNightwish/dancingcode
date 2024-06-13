@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import App from './App.vue';
 // 开发时调试：
-// import MeUI from '../src/index';
+// import MiUI from '../src/index';
 import '../packages/theme-chalk/src/index.scss';
 // 发包前测试：
-// import MeUI from '../lib/mi-vue-ui.common.js';
+import MiUI from '../lib/mi-ui.common.js';
 // 发包后，验证生效且可用：
-import MiUI from 'mi-element-ui';
+// import MiUI from 'mi-element-ui';
 import router from './router.js';
 
 import hljs from 'highlight.js';
@@ -16,7 +16,6 @@ import 'highlight.js/styles/stackoverflow-light.css';
 // 全局注册组件
 Vue.component('demo-block', demoBlock);
 Vue.config.productionTip = false;
-
 Vue.use(MiUI);
 
 router.afterEach(() => {
