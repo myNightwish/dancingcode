@@ -1,17 +1,17 @@
 import Vue from 'vue';
 import App from './App.vue';
-// 开发时调试：
-// import MiUI from '../src/index';
-import '../packages/theme-chalk/src/index.scss';
-// 发包前测试：
-import MiUI from '../lib/mi-ui.common.js';
-// 发包后，验证生效且可用：
-// import MiUI from 'mi-element-ui';
 import router from './router.js';
-
 import hljs from 'highlight.js';
 import demoBlock from './components/demo-block.vue';
 import 'highlight.js/styles/stackoverflow-light.css';
+import '../packages/theme-chalk/src/index.scss';
+
+// 开发时调试：
+// import MiUI from '../src/index';
+// 发包前测试：
+// import MiUI from '../lib/mi-ui.common.js';
+// 发包后，验证生效且可用：
+import MiUI from 'mi-element-ui';
 
 // 全局注册组件
 Vue.component('demo-block', demoBlock);
