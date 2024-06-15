@@ -7,11 +7,11 @@ import 'highlight.js/styles/stackoverflow-light.css';
 import '../packages/theme-chalk/src/index.scss';
 
 // 开发时调试：
-// import MiUI from '../src/index';
+import MiUI from '../src/index';
 // 发包前测试：
 // import MiUI from '../lib/mi-ui.common.js';
 // 发包后，验证生效且可用：
-import MiUI from 'mi-element-ui';
+// import MiUI from 'mi-element-ui';
 
 // 全局注册组件
 Vue.component('demo-block', demoBlock);

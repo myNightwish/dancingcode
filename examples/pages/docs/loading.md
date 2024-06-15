@@ -4,7 +4,7 @@
 
 ```html
 <template>
-    <me-loading :loading-text="text"></me-loading>
+    <mi-rainbow :loading-text="text"></mi-rainbow>
 </template>
 <script>
     export default {

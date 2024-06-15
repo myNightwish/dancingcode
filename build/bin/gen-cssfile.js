@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+// 引入组件列表
 var Components = require('../../components.json');
 var themes = [
   'theme-chalk'
@@ -15,11 +16,13 @@ function fileExists(filePath) {
   }
 }
 themes.forEach((theme) => {
+  // 不是默认主题，则使用 sass预处理器
   var isSCSS = theme !== 'theme-default';
   var indexContent = isSCSS ? '@import "./base.scss";\n' : '@import "./base.css";\n';
   Components.forEach(function(key) {
     if (['icon', 'option', 'option-group'].indexOf(key) > -1) return;
     var fileName = key + (isSCSS ? '.scss' : '.css');
+    // 例如：packages/theme-chalk/src/button.scss
     indexContent += '@import "./' + fileName + '";\n';
     var filePath = path.resolve(basepath, theme, 'src', fileName);
     if (!fileExists(filePath)) {
