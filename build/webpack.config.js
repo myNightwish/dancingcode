@@ -117,7 +117,7 @@ module.exports = {
         new VueLoaderPlugin(), // 确保添加插件实例
         new webpack.HotModuleReplacementPlugin(), // 确保添加 HMR 插件
         new HtmlWebpackPlugin({
-            template: 'public/index.html' // 引用 index.html 模板文件
+            template: 'examples/public/index.html' // 引用 index.html 模板文件
         }),
         new MiniCssExtractPlugin({
             // filename: '[name].[contenthash].css',

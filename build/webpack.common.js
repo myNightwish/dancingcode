@@ -1,7 +1,9 @@
+// 以 commonjs2 规范打包构建类库。
 const path = require('path');
+// 构建进度条
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
+// 引入公共配置
 const config = require('./config');
 
 module.exports = {
@@ -10,21 +12,29 @@ module.exports = {
         app: ['./src/index.js'] // Entry descriptor  传入一个对象 ./src/index.js
     },
     output: {
+        // 组件库打包产物输出的绝对路径
         path: path.resolve(process.cwd(), './lib'), // 绝对路径
-        publicPath: '/dist/', // 相对于服务(server-relative)
+        // 为项目中的所有资源指定一个基础路径【 相对于服务(server-relative)】
+        publicPath: '/dist/',
+        // 打包产物名字
         filename: 'mi-ui.common.js',
+        // 对于按需记载的chunk文件，chunk命名按此规则
         chunkFilename: '[id].js',
-        library: {
-            type: 'commonjs2', //配置将库暴露的方式
-            export: 'default' // 指定哪一个导出应该被暴露为一个库
-        }
+        // libraryExport：指定哪一个导出应该被暴露为一个库
+        libraryExport: 'default',  // 指定哪一个导出应该被暴露为一个库
+        // 库以何种规范打包构建：以 commonjs2 规范打包构建类库，之后库需要库这种暴露的方式引入
+        libraryTarget: 'commonjs2'
     },
+    // 解析
     resolve: {
+        // 在引入模块时，不带拓展名：此时会按照 .js .vue .json 顺序进行尝试
         extensions: ['.js', '.vue', '.json'],
         alias: config.alias,
+        // 告知webpack解析模块时应该搜索的目录
         modules: ['node_modules']
     },
-    // externals: config.externals, //外部扩展
+    // 外部拓展：
+    // externals: config.externals,
     performance: {
         // 控制 webpack 如何通知「资源(asset)和入口起点超过指定文件限制」
         hints: false // 不展示警告或错误提示
@@ -56,7 +66,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader', 'postcss-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
