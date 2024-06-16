@@ -1,0 +1,30 @@
+# 使用Travis CI 提供的是持续集成服务：
+# 用于 Node.js 项目的持续集成，执行环境变量设置、浏览器配置、虚拟帧缓冲区启动、
+# 部署脚本执行以及代码覆盖率报告上传的操作，以实现自动化构建、测试和部署
+
+
+# 指示 Travis CI 不需要使用 sudo 权限，通常用于加速构建过程，
+sudo: false
+# 指定项目的编程语言为 Node.js
+language: node_js
+# 指定使用 Node.js 版本 16
+node_js: 16
+# 在安装依赖项之前执行以下操作：
+before_install:
+# 设置环境变量 CHROME_BIN 指向 Chromium 浏览器。
+- export CHROME_BIN=chromium-browser
+# 设置 DISPLAY 环境变量以便 Xvfb 使用
+- export DISPLAY=:99.0
+# 启动 Xvfb（虚拟帧缓冲区 X 服务器），以支持没有显示的浏览器测试。
+- sh -e /etc/init.d/xvfb start
+# 设置 TRAVIS_COMMIT_MSG 环境变量为最新一次提交的哈希值和消息
+- export TRAVIS_COMMIT_MSG="[deploy] $(git log --format='%h - %B' --no-merges -n 1)"
+# 设置 TRAVIS_COMMIT_USER 环境变量为最新一次提交的用户名。
+- export TRAVIS_COMMIT_USER="$(git log --no-merges -n 1 --format=%an)"
+# 设置 TRAVIS_COMMIT_EMAIL 环境变量为最新一次提交的用户邮箱。
+- export TRAVIS_COMMIT_EMAIL="$(git log --no-merges -n 1 --format=%ae)"
+
+# 在成功构建之后执行以下操作：
+after_success:
+# 这个脚本通常用于部署操作
+- sh build/deploy-ci.sh

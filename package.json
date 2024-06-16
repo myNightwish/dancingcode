@@ -1,6 +1,6 @@
 {
   "name": "mi-element-ui",
-  "version": "1.0.3",
+  "version": "1.0.4-beta",
   "description": "A Vue.js 2.X UI Toolkit for Web, learning from elementUI from 0 to 1",
   "main": "./lib/mi-ui.common.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "clean": "rimraf lib && rimraf packages/*/lib",
     "lint": "eslint examples",
     "lint:fix": "eslint --fix examples",
-    "format": "cross-env NODE_ENV=development prettier --write ."
+    "format": "cross-env NODE_ENV=development prettier --write .",
+    "pub": "sh build/release.sh"
   },
   "keywords": [],
   "author": "",
