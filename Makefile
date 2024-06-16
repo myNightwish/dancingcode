@@ -7,9 +7,6 @@ default: help
 build-theme:
 	npm run build:theme
 
-install:
-	npm install
-
 install-cn:
 	npm install --registry=http://registry.npm.taobao.org
 
@@ -19,7 +16,7 @@ dev:
 new:
 	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
 
-dist: install
+dist: install-cn
 	npm run dist
 
 help:

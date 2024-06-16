@@ -4,17 +4,8 @@
 
 ```html
 <template>
-    <mi-rainbow :loading-text="text"></mi-rainbow>
+    <mi-rainbow loading-text="页面加载中……"></mi-rainbow>
 </template>
-<script>
-    export default {
-        data() {
-            return {
-                text: '页面加载中……'
-            };
-        }
-    };
-</script>
 ```
 
 :::

@@ -11,8 +11,8 @@ const webpackConfig = {
   // 这里是与整体打包的common.js不同，这里有多个入口分开打包
   entry: Components,
   output: {
-    path: path.resolve(process.cwd(), './lib'),
-    publicPath: '/dist/',
+    path: path.resolve(process.cwd(), 'lib/need/'),
+    publicPath: 'dist/need/',
     // 这儿是文件命名以组件名命名，方便按需引入
     filename: '[name].js',
     chunkFilename: '[id].js',

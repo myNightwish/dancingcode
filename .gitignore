@@ -1,7 +1,7 @@
 # 忽略目录
 node_modules
-build/dist
-test/
+dist/
+lib/
 
 # 忽略指定文件 
 .eslintignore
