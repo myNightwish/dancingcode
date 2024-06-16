@@ -8,12 +8,22 @@ const routes = [
         path: '/',
         name: 'component',
         //使用vue的异步组件技术 , 可以实现按需加载 .
-        component: resolve => require(['./components/HelloWorld.vue'], resolve)
+        component: resolve => require(['./pages/home/index.vue'], resolve)
     },
     {
-        path: '/test',
-        name: 'test',
-        component: resolve => require(['./docs/loading.md'], resolve)
+        path: '/docs',
+        name: 'docs',
+        component: resolve => require(['./pages/docs/loading.md'], resolve)
+    },
+    {
+        path: '/think',
+        name: 'think',
+        component: resolve => require(['./pages/think/index.vue'], resolve)
+    },
+    {
+        path: '/read',
+        name: 'read',
+        component: resolve => require(['./pages/read/index.vue'], resolve)
     }
 ];
 

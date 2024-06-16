@@ -23,7 +23,7 @@ module.exports = md => {
                 // 使用自定义开发组件 demo-block 来包裹内容并且渲染代码示例
                 return `<demo-block>
         ${description ? `<div>${md.render(description)}</div>` : ''}
-        <!--meui-demo: ${content}:meui-demo-->
+        <!--miui-demo: ${content}:miui-demo-->
         `;
             }
             return '</demo-block>';

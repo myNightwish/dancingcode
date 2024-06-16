@@ -8,6 +8,5 @@ module.exports = {
     bracketSpacing: true, // 对象左右两侧需要空格
     jsxBracketSameLine: false, // html 关闭标签换行
     arrowParens: 'avoid', // 单参数的箭头函数参数不需要括号
-    proseWrap: 'never',// markdown文档不换行
     trailingComma: "none" // 不添加尾随逗号
 }

@@ -1,20 +1,23 @@
 import Vue from 'vue';
 import App from './App.vue';
-import MiIcon from '../src/index';
-// import MeUI from '../lib/me-vue-ui.common.js';
-// 发包后：
-// import MeUI from 'me-element-ui';
 import router from './router.js';
-
 import hljs from 'highlight.js';
 import demoBlock from './components/demo-block.vue';
 import 'highlight.js/styles/stackoverflow-light.css';
+import '../packages/theme-chalk/src/index.scss';
+
+// 开发时调试：
+// import MiUI from '../src/index';
+// 发包前测试
+//  & 脚本的时候也可以测试脚本配置正确与否，否则导致打出的产物不及预期：
+import MiUI from '../lib/mi-ui.common.js';
+// 发包后，验证生效且可用：
+// import MiUI from 'mi-element-ui';
 
 // 全局注册组件
 Vue.component('demo-block', demoBlock);
 Vue.config.productionTip = false;
-
-Vue.use(MiIcon);
+Vue.use(MiUI);
 
 router.afterEach(() => {
     // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186

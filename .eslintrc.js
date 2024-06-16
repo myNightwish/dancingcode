@@ -8,8 +8,8 @@ module.exports = {
     es6: true
   },
   extends: [
-    'plugin:vue/essential',
     'eslint:recommended',
+    'plugin:vue/recommended', // 如果使用了 Vue
     'plugin:prettier/recommended' // 冲突时使用prettier的规则进行覆盖
   ],
   // 这项不设置，会导致require等语法提示飘红
@@ -25,7 +25,8 @@ module.exports = {
     'prettier/prettier': [
       'off',
       {
-        trailingComma: 'none' // 不添加尾随逗号
+        trailingComma: 'none', // 不添加尾随逗号
+        singleQuote: true, // 单引号
       }
     ]
   }

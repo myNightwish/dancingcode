@@ -1,5 +1,4 @@
 'use strict';
-
 var postcss = require('postcss');
 var scssSyntax = require('postcss-scss'); // 引入postcss-scss语法插件
 var fs = require('fs');
@@ -26,7 +25,6 @@ nodes.forEach(node => {
         classList.push(arr[1]);
     }
 });
-console.log('classList---', classList);
 
 // 将提取到的图标类名数组转换为JSON格式并写入到icon.json文件中。
 fs.writeFile(

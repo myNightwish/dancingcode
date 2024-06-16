@@ -1,5 +1,5 @@
 <template>
-    <div class="me-loading">
+    <div class="mi-rainbow">
         <div class="loader">
             <div class="loader-inner">
                 <div class="loader-line-wrap">
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    name: 'MeLoading',
+    name: 'MiRainbow',
     props: {
         loadingText: {
             type: String,
