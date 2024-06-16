@@ -227,8 +227,8 @@ const webpackConfig = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(), // 确保添加插件实例
     new HtmlWebpackPlugin({
-      template: './examples/public/index.tpl',
-      filename: './index.html'
+      template: './examples/index.tpl',
+      filename: 'index.html'
     }),
     new ProgressBarPlugin(),
     // 去除了HotModuleReplacementPlugin，为什么？

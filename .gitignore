@@ -2,6 +2,7 @@
 node_modules
 dist/
 lib/
+packages/theme-chalk/lib
 
 # 忽略指定文件 
 .eslintignore
