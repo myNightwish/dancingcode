@@ -124,6 +124,7 @@ const webpackConfig = {
         loader: 'url-loader',
         options: {
           limit: 10000,
+          esModule: false, // 这里设置为false
           name: path.posix.join('static', '[name].[hash:7].[ext]')
         }
       },
@@ -251,7 +252,7 @@ const webpackConfig = {
     // static: {
     //     directory: path.join(__dirname, 'dist')
     // },
-    port: 8088,
+    // port: 8088,
     host: 'client.baidu.com'
   },
 };

@@ -6,6 +6,7 @@ const cssmin = require('gulp-cssmin');
 
 // 动态导入 gulp-autoprefixer
 async function getAutoprefixer() {
+  // gulp-autoprefixer只支持module导入，因此这里不能用require，可以换用动态导入方式
   const autoprefixer = await import('gulp-autoprefixer');
   return autoprefixer.default;
 }

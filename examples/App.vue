@@ -1,24 +1,31 @@
 <template>
-    <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link>   |
-            <router-link to="/docs">Doc</router-link>   |
-            <router-link to="/think">Rethink</router-link>   |
-            <router-link to="/read">Reading</router-link>
+    <div id="app" :class="{ 'is-component': isComponent }">
+        <main-header ></main-header>
+        {{ lang }}
+        <div class="main-cnt">
+            <router-view></router-view>
         </div>
-        <router-view />
-    </div>
+        <main-footer v-if="lang !== 'play' && !isComponent"></main-footer>
+  </div>
 </template>
 
 <script>
+// import { use } from 'main/locale';
 export default {
-    name: 'App'
+    name: 'App',
+    computed: {
+      lang() {
+        return this.$route.path.split('/')[1] || 'zh-CN';
+      },
+      isComponent() {
+        return /^component-/.test(this.$route.name || '');
+      }
+    },
 };
 </script>
 
 <style>
-#app {
-    font-family: Avenir;
-    color: #2c3e50;
-}
+@import 'highlight.js/styles/color-brewer.css';
+@import 'assets/styles/common.css';
+@import 'assets/styles/fonts/style.css';
 </style>

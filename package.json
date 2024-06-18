@@ -7,11 +7,13 @@
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js",
     "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
-    "dev": "npm run clean && npm run build:file && webpack --config build/webpack.common.js && cross-env NODE_ENV=development webpack serve --config build/webpack.demo.js",
+    "dev": "npm run clean && npm run build:file && webpack --config build/webpack.common.js && cross-env NODE_ENV=development webpack serve --config build/webpack.demo.js & node build/bin/template.js",
+    "dev:play": "npm run clean && npm run build:file && cross-env NODE_ENV=development webpack serve --config build/webpack.demo.js && node build/bin/template.js",
     "dist": "npm run clean && npm run build:file && npm run build:theme && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && cross-env NODE_ENV=production webpack --config build/webpack.demo.js",
     "need": "npm run clean && npm run build:file && npm run build:theme && webpack --config build/webpack.component.js",
     "clean": "rimraf lib && rimraf packages/*/lib",
     "lint": "eslint examples",
+    "i18n": "node build/bin/i18n.js",
     "lint:fix": "eslint --fix examples",
     "format": "cross-env NODE_ENV=development prettier --write .",
     "pub": "sh build/release.sh"
@@ -21,6 +23,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.24.7",
+    "element-ui": "^2.15.14",
+    "throttle-debounce": "^1.0.1",
     "vue": "^2.7.16"
   },
   "devDependencies": {
@@ -29,6 +33,7 @@
     "@babel/plugin-transform-runtime": "^7.24.6",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
+    "algoliasearch": "^4.23.3",
     "babel-loader": "^9.1.3",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
@@ -56,6 +61,7 @@
     "markdown-it-container": "^4.0.0",
     "mi-element-ui": "^1.0.3",
     "mini-css-extract-plugin": "2.3.0",
+    "perspective.js": "^1.0.0",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "postcss-scss": "^4.0.9",
