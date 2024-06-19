@@ -5,11 +5,16 @@
 /* BEM
  -------------------------- */
 @mixin b($block) {
+    // 这里是声明定义的意思，比如backtop传入实际变成了：=>$B:mi-backtop !global;
     $B: $namespace + '-' + $block !global;
 
     .#{$B} {
         @content;
     }
+    // 实际变成了
+    // .mi-backtop {
+
+    // }
 }
 @mixin m($modifier) {
     $selector: &;

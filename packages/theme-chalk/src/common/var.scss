@@ -10,6 +10,16 @@ $--font-line-height-primary: 24px !default;
 /* Background
 -------------------------- */
 $--background-color-base: #f5f7fa !default;
+
+/* Transition
+-------------------------- */
+$--all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
+$--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--fade-linear-transition: opacity 200ms linear !default;
+$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
+$--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+
 /* Colors
 -------------------------- */
 $--color-white: #fff !default;
@@ -159,3 +169,38 @@ $--footer-padding: 0 20px !default;
 /* Main
 --------------------------*/
 $--main-padding: 20px !default;
+
+/* Backtop
+--------------------------*/
+/// color||Color|0
+$--backtop-background-color: $--color-danger !default;
+/// color||Color|0
+$--backtop-font-color: $--color-primary !default;
+/// color||Color|0
+$--backtop-hover-background-color: $--border-color-extra-light !default;
+
+/* Typography
+-------------------------- */
+$--font-path: 'fonts' !default;
+$--font-display: 'auto' !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-large: 20px !default;
+/// fontSize|1|Font Size|0
+$--font-size-large: 18px !default;
+/// fontSize|1|Font Size|0
+$--font-size-medium: 16px !default;
+/// fontSize|1|Font Size|0
+$--font-size-base: 14px !default;
+/// fontSize|1|Font Size|0
+$--font-size-small: 13px !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-small: 12px !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-primary: 500 !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-secondary: 100 !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-primary: 24px !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-secondary: 16px !default;
+$--font-color-disabled-base: #bbb !default;

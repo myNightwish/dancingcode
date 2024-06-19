@@ -1,24 +1,16 @@
 @import 'common/var';
 // CSS @规则 指定自定义字体
-@font-face {
-    font-family: 'element-icons';
-    src:
-        url('#{$--font-path}/element-icons.woff') format('woff'),
-        /* chrome, firefox */ url('#{$--font-path}/element-icons.ttf')
-            format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    // 定义字体样式使用斜体、倾斜或正常字体。 normal 默认值正常字体。
-
+@font-face { 
+    font-family: "element-icons";
+    src: url("./fonts/element-icons.woff") format("woff"),/* chrome, firefox */
+         url("./fonts/element-icons.ttf") format("truetype"); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
     font-weight: normal;
-    // https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face/font-display
-    // 作用：决定了一个@font-face 在不同的下载时间和可用时间下是如何展示的。
-    // $--font-display：一个Sass（或类似CSS预处理器）变量，用来存储特定的字体显示值，而不是每次都手动输入具体的值。
-    // font-display: $--font-display;
+    font-display: $--font-display;
     font-style: normal;
 }
 
 [class^='mi-icon-'],
 [class*=' mi-icon-'] {
-    /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'element-icons' !important;
     font-style: normal;
     font-weight: normal;

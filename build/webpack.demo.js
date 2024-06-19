@@ -31,7 +31,7 @@ function wrap(render) {
 const webpackConfig = {
   // 动态mode，根据环境变量 NODE_ENV 决定是开发模式还是生产模式
   mode: process.env.NODE_ENV,
-  entry: './examples/entry.js',
+  entry: './examples/play.js',
   output: {
     path: path.resolve(process.cwd(), 'dist/'),
     // 指定发布到线上资源的 URL 前缀，在浏览器加载资源时会用到。常用于设置 CDN 地址或服务器路径。
@@ -227,9 +227,12 @@ const webpackConfig = {
   plugins: [
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(), // 确保添加插件实例
+    // new HtmlWebpackPlugin({
+    //   template: './examples/index.tpl',
+    //   filename: 'index.html'
+    // }),
     new HtmlWebpackPlugin({
-      template: './examples/index.tpl',
-      filename: 'index.html'
+      template: './examples/index.html',
     }),
     new ProgressBarPlugin(),
     // 去除了HotModuleReplacementPlugin，为什么？
@@ -252,7 +255,6 @@ const webpackConfig = {
     // static: {
     //     directory: path.join(__dirname, 'dist')
     // },
-    // port: 8088,
     host: 'client.baidu.com'
   },
 };

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="palyapp">
         <div id="nav">
           <router-link to="/">Home</router-link>   |
           <router-link to="/think">Rethink</router-link>   |
@@ -16,8 +16,10 @@ export default {
 </script>
 
 <style>
-#app {
+#palyapp {
   font-family: Avenir;
   color: #2c3e50;
+  height: 100vh;
+  overflow: auto;
 }
 </style>
