@@ -8,5 +8,6 @@
   "header": "./packages/header/index.js",
   "main": "./packages/main/index.js",
   "rainbow": "./packages/rainbow/index.js",
-  "backtop": "./packages/backtop/index.js"
+  "backtop": "./packages/backtop/index.js",
+  "badge": "./packages/badge/index.js"
 }

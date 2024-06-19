@@ -170,10 +170,6 @@
               "title": "Pagination 分页"
             },
             {
-              "path": "/badge",
-              "title": "Badge 标记"
-            },
-            {
               "path": "/avatar",
               "title": "Avatar 头像"
             },
@@ -315,6 +311,10 @@
             {
               "path": "/backtop",
               "title": "Backtop 回到顶部"
+            },
+            {
+              "path": "/badge",
+              "title": "Badge"
             }
           ]
         }

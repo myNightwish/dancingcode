@@ -10,6 +10,7 @@ import MiHeader from '../packages/header/index.js';
 import MiMain from '../packages/main/index.js';
 import MiRainbow from '../packages/rainbow/index.js';
 import MiBacktop from '../packages/backtop/index.js';
+import MiBadge from '../packages/badge/index.js';
 /* 导入组件库所有组件 */
 const components = [
   MiIcon,
@@ -21,7 +22,8 @@ const components = [
   MiHeader,
   MiMain,
   MiRainbow,
-  MiBacktop
+  MiBacktop,
+  MiBadge
 ];
 
 /* 定义组件库组件注册安装的install方法, 当使用 use 注册插件，则所有的组件都将被注册 */
@@ -57,13 +59,14 @@ export default {
   /* 导出的对象必须具有 install，才能被 Vue.use() 方法安装 */
   install,
     MiIcon,
-    MiButton,
-    MiButtonGroup,
-    MiAside,
-    MiContainer,
-    MiFooter,
-    MiHeader,
-    MiMain,
-    MiRainbow,
-    MiBacktop
+  MiButton,
+  MiButtonGroup,
+  MiAside,
+  MiContainer,
+  MiFooter,
+  MiHeader,
+  MiMain,
+  MiRainbow,
+  MiBacktop,
+  MiBadge
 };
