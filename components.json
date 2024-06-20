@@ -10,5 +10,6 @@
   "rainbow": "./packages/rainbow/index.js",
   "backtop": "./packages/backtop/index.js",
   "badge": "./packages/badge/index.js",
-  "avatar": "./packages/avatar/index.js"
+  "avatar": "./packages/avatar/index.js",
+  "tag": "./packages/tag/index.js"
 }

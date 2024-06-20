@@ -315,6 +315,10 @@
             {
               "path": "/avatar",
               "title": "Avatar"
+            },
+            {
+              "path": "/tag",
+              "title": "Tag 标签"
             }
           ]
         }

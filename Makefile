@@ -17,7 +17,6 @@ devplay:
 
 new:
 	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
-	buildfile
 
 buildfile:
 	npm run build:file
