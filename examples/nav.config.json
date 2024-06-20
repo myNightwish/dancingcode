@@ -170,10 +170,6 @@
               "title": "Pagination 分页"
             },
             {
-              "path": "/avatar",
-              "title": "Avatar 头像"
-            },
-            {
               "path": "/skeleton",
               "title": "Skeleton 骨架屏"
             },
@@ -314,7 +310,11 @@
             },
             {
               "path": "/badge",
-              "title": "Badge"
+              "title": "Badge 标记"
+            },
+            {
+              "path": "/avatar",
+              "title": "Avatar"
             }
           ]
         }

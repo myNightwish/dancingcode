@@ -12,9 +12,15 @@ install-cn:
 
 dev:
 	npm run dev
+devplay:
+	npm run dev:play
 
 new:
 	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
+	buildfile
+
+buildfile:
+	npm run build:file
 
 dist: install-cn
 	npm run dist

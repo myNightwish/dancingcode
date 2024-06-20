@@ -11,6 +11,7 @@ import MiMain from '../packages/main/index.js';
 import MiRainbow from '../packages/rainbow/index.js';
 import MiBacktop from '../packages/backtop/index.js';
 import MiBadge from '../packages/badge/index.js';
+import MiAvatar from '../packages/avatar/index.js';
 /* 导入组件库所有组件 */
 const components = [
   MiIcon,
@@ -23,7 +24,8 @@ const components = [
   MiMain,
   MiRainbow,
   MiBacktop,
-  MiBadge
+  MiBadge,
+  MiAvatar
 ];
 
 /* 定义组件库组件注册安装的install方法, 当使用 use 注册插件，则所有的组件都将被注册 */
@@ -68,5 +70,6 @@ export default {
   MiMain,
   MiRainbow,
   MiBacktop,
-  MiBadge
+  MiBadge,
+  MiAvatar
 };

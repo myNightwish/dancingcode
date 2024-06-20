@@ -46,6 +46,10 @@ export default {
 </script>`
   },
   {
+    filename: path.join('../../examples/docs/zh-CN', `${componentname}.md`),
+    content: `## ${ComponentName} ${chineseName}`
+  },
+  {
     filename: path.join('../../packages/theme-chalk/src', `${componentname}.scss`),
     content: `@import "mixins/mixins";
 @import "common/var";
