@@ -27,7 +27,7 @@
       <!-- 标记: badge-->
       <!-- <mi-badge :is-dot="true" :hidden="hidden" type="warning"> -->
       <mi-badge :value="10" :hidden="hidden" type="warning">
-        <mi-button type="success" plain>成功按钮</mi-button>
+        <mi-button type="success" plain @click="hiddenBadge">成功按钮</mi-button>
       </mi-badge>
       <!-- 头像avatar -->
       <mi-avatar icon="el-icon-user-solid"/>
@@ -43,6 +43,11 @@ export default {
     return {
       hidden: false,
       badgeNum: 10
+    }
+  },
+  methods: {
+    hiddenBadge() {
+      this.hidden = !this.hidden;
     }
   }
 };

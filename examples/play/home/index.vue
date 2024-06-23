@@ -1,16 +1,17 @@
 <template>
   <div class="home_wrapper">
       <mi-backtop target="#palyapp"></mi-backtop>
-      <div class="content_area" @click="hidden=!hidden">
+      <div class="content_area">
         welcome to My Vue.js UI By WebPack!
       </div>
       <mi-tag
-        :text="tagConf.text"
         :closable="tagConf.closable" 
-        :type="tagConf.type" :size="tagConf.size"
+        :type="tagConf.type"
+        :size="tagConf.size"
         :effect="tagConf.effect"
+        @click="handleClick"
       >
-        标签
+        {{tagConf.text}}
       </mi-tag>
   </div>
 </template>
@@ -27,6 +28,11 @@ export default {
         closable: true,
         effect: 'plain'
       }
+    }
+  },
+  methods: {
+    handleClick() {
+      this.tagConf.text='changed-hello'
     }
   }
 }
