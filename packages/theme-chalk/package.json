@@ -1,0 +1,25 @@
+{
+  "name": "mi-theme-chalk",
+  "version": "1.0.0",
+  "description": "主题包",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "node ../../build/bin/gen-cssfile && gulp build --gulpfile gulpfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myNightwish/dancingcode-theme.git"
+  },
+  "keywords": [
+    "mi-theme"
+  ],
+  "author": "nightwish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myNightwish/dancingcode-theme/issues"
+  },
+  "homepage": "https://github.com/myNightwish/dancingcode-theme#readme"
+}

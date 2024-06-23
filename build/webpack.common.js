@@ -17,7 +17,7 @@ module.exports = {
         // 为项目中的所有资源指定一个基础路径【 相对于服务(server-relative)】
         publicPath: '/dist/',
         // 打包产物名字
-        filename: 'mi-ui.common.js',
+        filename: 'mi-element-ui.js',
         // 对于按需记载的chunk文件，chunk命名按此规则
         chunkFilename: '[id].js',
         // libraryExport：指定哪一个导出应该被暴露为一个库

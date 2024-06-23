@@ -11,7 +11,6 @@ if (!process.argv[2]) {
   console.error('[组件名]必填 - Please enter new component name');
   process.exit(1);
 }
-
 const path = require('path');
 const fileSave = require('file-save');
 const uppercamelcase = require('uppercamelcase');
@@ -20,6 +19,8 @@ const componentname = process.argv[2];
 // 获取组件名（英文），并转换组件名为大驼峰命名法
 const ComponentName = uppercamelcase(componentname);
 const PackagePath = path.resolve(__dirname, '../../packages', componentname);
+const chineseName = process.argv[3] || componentname;
+
 // 定义需要创建的文件及其内容
 const Files = [
   {
@@ -36,14 +37,18 @@ export default ${ComponentName};`
   {
     filename: 'src/main.vue',
     content: `<template>
-  <div class="el-${componentname}"></div>
+  <div class="mi-${componentname}"></div>
 </template>
 
 <script>
 export default {
-  name: 'El${ComponentName}'
+  name: 'Mi${ComponentName}'
 };
 </script>`
+  },
+  {
+    filename: path.join('../../examples/docs/zh-CN', `${componentname}.md`),
+    content: `## ${ComponentName} ${chineseName}`
   },
   {
     filename: path.join('../../packages/theme-chalk/src', `${componentname}.scss`),
@@ -73,6 +78,23 @@ Files.forEach(file => {
     .end('\n');
 });
 
-// 更新导航配置：略，暂时不需要
+// 更新导航配置：
+// 添加到 nav.config.json
+// 拿到路由配置json
+const navConfigFile = require('../../examples/nav.config.json');
+
+Object.keys(navConfigFile).forEach(lang => {
+  //  这里配置的4是name为组件配置
+  let groups = navConfigFile[lang][4].groups;
+  groups[groups.length - 1].list.push({
+    path: `/${componentname}`,
+    title: lang === 'zh-CN' && componentname !== chineseName
+      ? `${ComponentName} ${chineseName}`
+      : ComponentName
+  });
+});
+fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+  .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
+  .end('\n');
 
 console.log('--------DONE--------!');

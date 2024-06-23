@@ -8,8 +8,8 @@
         <div class="source">
             <slot name="source"></slot>
         </div>
-        <div class="meta" ref="meta">
-            <div class="description" v-if="$slots.default">
+        <div ref="meta" class="meta">
+            <div v-if="$slots.default" class="description">
                 <slot></slot>
             </div>
             <div class="highlight">
@@ -17,8 +17,8 @@
             </div>
         </div>
         <div
-            class="demo-block-control"
             ref="control"
+            class="demo-block-control"
             @click="isExpanded = !isExpanded"
         >
             <span>{{ controlText }}</span>

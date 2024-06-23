@@ -5,10 +5,35 @@
 /* BEM
  -------------------------- */
 @mixin b($block) {
+    // 这里是声明定义的意思，比如backtop传入实际变成了：=>$B:mi-backtop !global;
     $B: $namespace + '-' + $block !global;
 
     .#{$B} {
         @content;
+    }
+}
+@mixin e($element) {
+    $E: $element !global;
+    $selector: &;
+    $currentSelector: "";
+    @each $unit in $element {
+      $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+    }
+  
+    @if hitAllSpecialNestRule($selector) {
+      @at-root {
+        #{$selector} {
+          #{$currentSelector} {
+            @content;
+          }
+        }
+      }
+    } @else {
+      @at-root {
+        #{$currentSelector} {
+          @content;
+        }
+      }
     }
 }
 @mixin m($modifier) {
@@ -28,6 +53,7 @@
         }
     }
 }
+
 @mixin when($state) {
     @at-root {
         &.#{$state-prefix + $state} {
