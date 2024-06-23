@@ -11,5 +11,7 @@
   "backtop": "./packages/backtop/index.js",
   "badge": "./packages/badge/index.js",
   "avatar": "./packages/avatar/index.js",
-  "tag": "./packages/tag/index.js"
+  "tag": "./packages/tag/index.js",
+  "divider": "./packages/divider/index.js",
+  "card": "./packages/card/index.js"
 }

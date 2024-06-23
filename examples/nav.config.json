@@ -319,6 +319,14 @@
             {
               "path": "/tag",
               "title": "Tag 标签"
+            },
+            {
+              "path": "/divider",
+              "title": "Divider"
+            },
+            {
+              "path": "/card",
+              "title": "Card"
             }
           ]
         }

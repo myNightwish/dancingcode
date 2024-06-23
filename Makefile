@@ -12,6 +12,7 @@ install-cn:
 
 dev:
 	npm run dev
+
 devplay:
 	npm run dev:play
 
@@ -23,6 +24,8 @@ buildfile:
 
 dist: install-cn
 	npm run dist
+
+init: new buildfile build-theme
 
 help:
 	@echo "   \033[35mmake\033[0m \033[1m命令使用说明\033[0m"

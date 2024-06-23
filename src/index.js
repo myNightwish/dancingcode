@@ -13,6 +13,8 @@ import MiBacktop from '../packages/backtop/index.js';
 import MiBadge from '../packages/badge/index.js';
 import MiAvatar from '../packages/avatar/index.js';
 import MiTag from '../packages/tag/index.js';
+import MiDivider from '../packages/divider/index.js';
+import MiCard from '../packages/card/index.js';
 /* 导入组件库所有组件 */
 const components = [
   MiIcon,
@@ -27,7 +29,9 @@ const components = [
   MiBacktop,
   MiBadge,
   MiAvatar,
-  MiTag
+  MiTag,
+  MiDivider,
+  MiCard
 ];
 
 /* 定义组件库组件注册安装的install方法, 当使用 use 注册插件，则所有的组件都将被注册 */
@@ -74,5 +78,7 @@ export default {
   MiBacktop,
   MiBadge,
   MiAvatar,
-  MiTag
+  MiTag,
+  MiDivider,
+  MiCard
 };
