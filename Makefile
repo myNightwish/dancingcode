@@ -4,7 +4,7 @@
 default: help
 
 # build all theme
-build-theme:
+buildTheme:
 	npm run build:theme
 
 install-cn:
@@ -25,7 +25,7 @@ buildfile:
 dist: install-cn
 	npm run dist
 
-init: new buildfile build-theme
+init: new buildfile buildTheme
 
 help:
 	@echo "   \033[35mmake\033[0m \033[1m命令使用说明\033[0m"

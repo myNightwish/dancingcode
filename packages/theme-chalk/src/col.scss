@@ -1,0 +1,156 @@
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+
+[class*="mi-col-"] {
+  float: left;
+  box-sizing: border-box;
+}
+
+.mi-col-0 {
+  display: none;
+}
+
+@for $i from 0 through 24 {
+  .mi-col-#{$i} {
+    width: ($--breakpoints-gap * $i * 100) * 1%;
+  }
+
+  .mi-col-offset-#{$i} {
+    margin-left: ($--breakpoints-gap * $i * 100) * 1%;
+  }
+
+  .mi-col-pull-#{$i} {
+    position: relative;
+    right: ($--breakpoints-gap * $i * 100) * 1%;
+  }
+
+  .mi-col-push-#{$i} {
+    position: relative;
+    left: ($--breakpoints-gap * $i * 100) * 1%;
+  }
+}
+
+@include res(xs) {
+  .mi-col-xs-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .mi-col-xs-#{$i} {
+      width: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-xs-offset-#{$i} {
+      margin-left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-xs-pull-#{$i} {
+      position: relative;
+      right: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-xs-push-#{$i} {
+      position: relative;
+      left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(sm) {
+  .mi-col-sm-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .mi-col-sm-#{$i} {
+      width: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-sm-offset-#{$i} {
+      margin-left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-sm-pull-#{$i} {
+      position: relative;
+      right: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-sm-push-#{$i} {
+      position: relative;
+      left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(md) {
+  .mi-col-md-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .mi-col-md-#{$i} {
+      width: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-md-offset-#{$i} {
+      margin-left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-md-pull-#{$i} {
+      position: relative;
+      right: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-md-push-#{$i} {
+      position: relative;
+      left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(lg) {
+  .mi-col-lg-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .mi-col-lg-#{$i} {
+      width: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-lg-offset-#{$i} {
+      margin-left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-lg-pull-#{$i} {
+      position: relative;
+      right: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-lg-push-#{$i} {
+      position: relative;
+      left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(xl) {
+  .mi-col-xl-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .mi-col-xl-#{$i} {
+      width: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-xl-offset-#{$i} {
+      margin-left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-xl-pull-#{$i} {
+      position: relative;
+      right: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+
+    .mi-col-xl-push-#{$i} {
+      position: relative;
+      left: ($--breakpoints-gap * $i * 100) * 1%;
+    }
+  }
+}

@@ -14,5 +14,8 @@
   "tag": "./packages/tag/index.js",
   "divider": "./packages/divider/index.js",
   "card": "./packages/card/index.js",
-  "breadcrumb": "./packages/breadcrumb/index.js"
+  "breadcrumb": "./packages/breadcrumb/index.js",
+  "breadcrumb-item": "./packages/breadcrumb-item/index.js",
+  "row": "./packages/row/index.js",
+  "col": "./packages/col/index.js"
 }

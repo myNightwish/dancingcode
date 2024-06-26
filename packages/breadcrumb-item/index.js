@@ -1,4 +1,4 @@
-import BreadcrumbItem from '../breadcrumb/src/breadcrumb-item.vue';
+import BreadcrumbItem from './src/main.vue';
 
 /* istanbul ignore next */
 BreadcrumbItem.install = function(Vue) {

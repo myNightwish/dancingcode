@@ -1,4 +1,3 @@
-<script>
 export default {
   name: 'MiAvatar',
   props: {
@@ -83,7 +82,7 @@ export default {
 
   render() {
     const { avatarClass, size } = this;
-{/*  // size 为数值时 设置内联样式 覆盖默认尺寸 */}
+    {/*  // size 为数值时 设置内联样式 覆盖默认尺寸 */}
     const sizeStyle = typeof size === 'number' ? {
       height: `${size}px`,
       width: `${size}px`,
@@ -100,4 +99,4 @@ export default {
     );
   }
 };
-</script>
+
