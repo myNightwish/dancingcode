@@ -19,6 +19,7 @@ import MiBreadcrumb from '../packages/breadcrumb/index.js';
 import MiBreadcrumbItem from '../packages/breadcrumb-item/index.js';
 import MiRow from '../packages/row/index.js';
 import MiCol from '../packages/col/index.js';
+import MiProgress from '../packages/progress/index.js';
 /* 导入组件库所有组件 */
 const components = [
   MiIcon,
@@ -39,7 +40,8 @@ const components = [
   MiBreadcrumb,
   MiBreadcrumbItem,
   MiRow,
-  MiCol
+  MiCol,
+  MiProgress
 ];
 
 /* 定义组件库组件注册安装的install方法, 当使用 use 注册插件，则所有的组件都将被注册 */
@@ -92,5 +94,6 @@ export default {
   MiBreadcrumb,
   MiBreadcrumbItem,
   MiRow,
-  MiCol
+  MiCol,
+  MiProgress
 };

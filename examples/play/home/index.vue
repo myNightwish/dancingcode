@@ -4,6 +4,7 @@
       <div class="content_area">
         welcome to My Vue.js UI By WebPack!
       </div>
+    <mi-progress :type="'circle'" :text-inside="false" :stroke-width="26" :percentage="70" :show-text="true"></mi-progress>
       <mi-tag
         :closable="tagConf.closable" 
         :type="tagConf.type"

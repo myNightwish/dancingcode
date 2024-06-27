@@ -17,5 +17,6 @@
   "breadcrumb": "./packages/breadcrumb/index.js",
   "breadcrumb-item": "./packages/breadcrumb-item/index.js",
   "row": "./packages/row/index.js",
-  "col": "./packages/col/index.js"
+  "col": "./packages/col/index.js",
+  "progress": "./packages/progress/index.js"
 }
