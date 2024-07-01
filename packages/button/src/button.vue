@@ -1,7 +1,6 @@
 <template>
     <button
         class="mi-button"
-        @click="handleClick"
         :class="[
             type ? 'mi-button--' + type : '',
             buttonSize ? 'mi-button--' + buttonSize : '',
@@ -13,16 +12,25 @@
                 'is-circle': circle
             }
         ]"
+        @click="handleClick"
     >
-        <i class="mi-icon-loading" v-if="loading"></i>
-        <i :class="icon" v-if="icon && !loading"></i>
+        <i v-if="loading" class="mi-icon-loading"></i>
+        <i v-if="icon && !loading" :class="icon"></i>
         <span v-if="$slots.default"><slot></slot></span>
     </button>
 </template>
 
 <script>
 export default {
-    name: 'mi-button',
+    name: 'MiButton',
+    inject: {
+      elForm: {
+        default: ''
+      },
+      elFormItem: {
+        default: ''
+      }
+    },
     props: {
         type: {
             type: String,
@@ -36,7 +44,10 @@ export default {
             type: String,
             default: 'button'
         },
-        size: String,
+        size: {
+            type: String,
+            default: ''
+        },
         plain: Boolean,
         round: Boolean,
         circle: Boolean,
@@ -45,13 +56,14 @@ export default {
         autofocus: Boolean
     },
     computed: {
-        buttonSize() {
-            // todo： 暂时不支持，等form组件时写这里
-            // return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
-            return this.size;
+        _elFormItemSize() {
+            return (this.elFormItem || {}).elFormItemSize;
         },
+        buttonSize() {
+        return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
+      },
         buttonDisabled() {
-            return this.disabled;
+            return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.elForm || {}).disabled;
         }
     },
     methods: {

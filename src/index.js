@@ -2,7 +2,6 @@
 
 import MiIcon from '../packages/icon/index.js';
 import MiButton from '../packages/button/index.js';
-import MiButtonGroup from '../packages/button-group/index.js';
 import MiRainbow from '../packages/rainbow/index.js';
 import MiBacktop from '../packages/backtop/index.js';
 import MiDivider from '../packages/divider/index.js';
@@ -16,7 +15,6 @@ import MiLoading from '../packages/loading/index.js';
 const components = [
   MiIcon,
   MiButton,
-  MiButtonGroup,
   MiRainbow,
   MiBacktop,
   MiDivider,
@@ -61,7 +59,6 @@ export default {
   install,
     MiIcon,
   MiButton,
-  MiButtonGroup,
   MiRainbow,
   MiBacktop,
   MiDivider,

@@ -9,14 +9,6 @@
       <mi-button type="warning" circle></mi-button>
       <mi-button type="danger" icon="mi-icon-delete">危险按钮</mi-button>
       <mi-button type="text">文本</mi-button>
-      <mi-button-group>
-          <mi-button type="primary" icon="mi-icon-arrow-left"
-              >上一页</mi-button
-          >
-          <mi-button type="primary"
-              >下一页<i class="mi-icon-arrow-right mi-icon--right"></i
-          ></mi-button>
-      </mi-button-group>
   </div>
 </template>
 
