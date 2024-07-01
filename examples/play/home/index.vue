@@ -10,12 +10,6 @@
     <mi-divider><i class="mi-icon-mobile-phone"></i></mi-divider>
     <span>为了无法计算的价值</span>
     <mi-divider content-position="right">阿里云</mi-divider>
-    <mi-breadcrumb separator=">">
-      <mi-breadcrumb-item>首页</mi-breadcrumb-item>
-      <mi-breadcrumb-item>活动管理</mi-breadcrumb-item>
-      <mi-breadcrumb-item>活动列表</mi-breadcrumb-item>
-      <mi-breadcrumb-item>活动详情</mi-breadcrumb-item>
-    </mi-breadcrumb>
     <mi-row :tag="'span'">
       <mi-col :span="24"><div class="grid-content bg-purple-dark"></div></mi-col>
     </mi-row>

@@ -1,7 +1,7 @@
 @import 'common/var';
 // CSS @规则 指定自定义字体
 @font-face { 
-    font-family: "element-icons";
+    font-family: "mi-icons";
     src: url("./fonts/element-icons.woff") format("woff"),/* chrome, firefox */
          url("./fonts/element-icons.ttf") format("truetype"); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
     font-weight: normal;
@@ -11,7 +11,7 @@
 
 [class^='mi-icon-'],
 [class*=' mi-icon-'] {
-    font-family: 'element-icons' !important;
+    font-family: 'mi-icons' !important;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;

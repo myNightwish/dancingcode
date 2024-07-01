@@ -5,8 +5,6 @@ import MiButton from '../packages/button/index.js';
 import MiRainbow from '../packages/rainbow/index.js';
 import MiBacktop from '../packages/backtop/index.js';
 import MiDivider from '../packages/divider/index.js';
-import MiBreadcrumb from '../packages/breadcrumb/index.js';
-import MiBreadcrumbItem from '../packages/breadcrumb-item/index.js';
 import MiRow from '../packages/row/index.js';
 import MiCol from '../packages/col/index.js';
 import MiProgress from '../packages/progress/index.js';
@@ -18,8 +16,6 @@ const components = [
   MiRainbow,
   MiBacktop,
   MiDivider,
-  MiBreadcrumb,
-  MiBreadcrumbItem,
   MiRow,
   MiCol,
   MiProgress
@@ -55,17 +51,15 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 /* 导出install、各个组件 */
 export default {
-  /* 导出的对象必须具有 install，才能被 Vue.use() 方法安装 */
-  install,
+    /* 导出的对象必须具有 install，才能被 Vue.use() 方法安装 */
+    install,
     MiIcon,
-  MiButton,
-  MiRainbow,
-  MiBacktop,
-  MiDivider,
-  MiBreadcrumb,
-  MiBreadcrumbItem,
-  MiRow,
-  MiCol,
-  MiProgress,
-  MiLoading
+    MiButton,
+    MiRainbow,
+    MiBacktop,
+    MiDivider,
+    MiRow,
+    MiCol,
+    MiProgress,
+    MiLoading
 };
