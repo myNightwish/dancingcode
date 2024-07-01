@@ -5,24 +5,6 @@
         welcome to My Vue.js UI By WebPack!
       </div>
     <mi-progress :type="'circle'" :text-inside="false" :stroke-width="26" :percentage="70" :show-text="true"></mi-progress>
-      <mi-tag
-        :closable="tagConf.closable" 
-        :type="tagConf.type"
-        :size="tagConf.size"
-        :effect="tagConf.effect"
-        @click="handleClick"
-      >
-        {{tagConf.text}}
-      </mi-tag>
-      <mi-card class="box-card">
-        <div slot="header" class="clearfix">
-          <span>卡片名称</span>
-          <mi-button style="float: right; padding: 3px 0" type="text">❌</mi-button>
-        </div>
-        <div v-for="o in 4" :key="o" class="text item">
-          {{'列表内容 ' + o }}
-        </div>
-    </mi-card>
     <mi-divider content-position="left">少年包青天</mi-divider>
     <span>饿了别叫妈, 叫饿了么</span>
     <mi-divider><i class="mi-icon-mobile-phone"></i></mi-divider>
@@ -45,12 +27,6 @@
       <mi-col :span="8"><div class="grid-content bg-purple">1234</div></mi-col>
       <mi-col :span="8"><div class="grid-content bg-purple-light">45465</div></mi-col>
       <mi-col :span="8"><div class="grid-content bg-purple">42432</div></mi-col>
-    </mi-row>
-    <mi-row>
-      <mi-col :span="6"><div class="grid-content bg-purple"></div></mi-col>
-      <mi-col :span="6"><div class="grid-content bg-purple-light"></div></mi-col>
-      <mi-col :span="6"><div class="grid-content bg-purple"></div></mi-col>
-      <mi-col :span="6"><div class="grid-content bg-purple-light"></div></mi-col>
     </mi-row>
     <mi-row :gutter="10">
         <mi-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple">33</div></mi-col>

@@ -3,18 +3,9 @@
 import MiIcon from '../packages/icon/index.js';
 import MiButton from '../packages/button/index.js';
 import MiButtonGroup from '../packages/button-group/index.js';
-import MiAside from '../packages/aside/index.js';
-import MiContainer from '../packages/container/index.js';
-import MiFooter from '../packages/footer/index.js';
-import MiHeader from '../packages/header/index.js';
-import MiMain from '../packages/main/index.js';
 import MiRainbow from '../packages/rainbow/index.js';
 import MiBacktop from '../packages/backtop/index.js';
-import MiBadge from '../packages/badge/index.js';
-import MiAvatar from '../packages/avatar/index.js';
-import MiTag from '../packages/tag/index.js';
 import MiDivider from '../packages/divider/index.js';
-import MiCard from '../packages/card/index.js';
 import MiBreadcrumb from '../packages/breadcrumb/index.js';
 import MiBreadcrumbItem from '../packages/breadcrumb-item/index.js';
 import MiRow from '../packages/row/index.js';
@@ -26,18 +17,9 @@ const components = [
   MiIcon,
   MiButton,
   MiButtonGroup,
-  MiAside,
-  MiContainer,
-  MiFooter,
-  MiHeader,
-  MiMain,
   MiRainbow,
   MiBacktop,
-  MiBadge,
-  MiAvatar,
-  MiTag,
   MiDivider,
-  MiCard,
   MiBreadcrumb,
   MiBreadcrumbItem,
   MiRow,
@@ -80,18 +62,9 @@ export default {
     MiIcon,
   MiButton,
   MiButtonGroup,
-  MiAside,
-  MiContainer,
-  MiFooter,
-  MiHeader,
-  MiMain,
   MiRainbow,
   MiBacktop,
-  MiBadge,
-  MiAvatar,
-  MiTag,
   MiDivider,
-  MiCard,
   MiBreadcrumb,
   MiBreadcrumbItem,
   MiRow,
