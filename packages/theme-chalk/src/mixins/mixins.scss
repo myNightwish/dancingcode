@@ -61,3 +61,31 @@
         }
     }
 }
+
+/* Break-points
+ ----------接受两个参数 $key(响应尺寸) 和 $map （断点Map）---------------- */
+ @mixin res($key, $map: $--breakpoints) {
+  // 循环断点Map，如果存在则返回
+  // 使用函数 map-has-key($map,$key) 查：根据 $key 参数，返回 $key 在 $map 中对应的 value 值
+  @if map-has-key($map, $key) {
+    // 使用函数 map-get($map,$key)拿： 返回 $key 在 $map 中对应的 value 值
+    // 使用函数 inspect($value) 将其转成字符串，使用插值 #{}、@content 生成 媒体查询
+    @media only screen and #{inspect(map-get($map, $key))} {
+      @content;
+    }
+  } @else {
+    // 如果 $key 不存在 $map中，将返回 null 值（此时生成警告断点未定义 Undefeined points ）
+    @warn "Undefeined points: `#{$map}`";
+  }
+}
+// 最终生成：
+/* 超小屏幕（手机，小于 768px） */
+// @media only screen and (max-width: 767px) { ... } 
+// /* 小屏幕（平板，大于等于 768px） */
+// @media only screen and (min-width: 768px) { ... }
+// /* 中等屏幕（桌面显示器，大于等于 992px） */
+// @media only screen and (min-width: 992px) { ... }
+// /* 大屏幕（大桌面显示器，大于等于 1200px） */
+// @media only screen and (min-width: 1200px) { ... }
+// /* 超大屏幕（大桌面显示器，大于等于 1920px） */
+// @media only screen and (min-width: 1920px) { ... }

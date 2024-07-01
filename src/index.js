@@ -15,6 +15,12 @@ import MiAvatar from '../packages/avatar/index.js';
 import MiTag from '../packages/tag/index.js';
 import MiDivider from '../packages/divider/index.js';
 import MiCard from '../packages/card/index.js';
+import MiBreadcrumb from '../packages/breadcrumb/index.js';
+import MiBreadcrumbItem from '../packages/breadcrumb-item/index.js';
+import MiRow from '../packages/row/index.js';
+import MiCol from '../packages/col/index.js';
+import MiProgress from '../packages/progress/index.js';
+import MiLoading from '../packages/loading/index.js';
 /* 导入组件库所有组件 */
 const components = [
   MiIcon,
@@ -31,7 +37,12 @@ const components = [
   MiAvatar,
   MiTag,
   MiDivider,
-  MiCard
+  MiCard,
+  MiBreadcrumb,
+  MiBreadcrumbItem,
+  MiRow,
+  MiCol,
+  MiProgress
 ];
 
 /* 定义组件库组件注册安装的install方法, 当使用 use 注册插件，则所有的组件都将被注册 */
@@ -41,12 +52,12 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component);
   });
 
-  /* Vue.use(Loading.directive);
+  Vue.use(MiLoading.directive);
 
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
-  }; */
+  };
 
   /* Vue.prototype.$loading = Loading.service;
   Vue.prototype.$msgbox = MessageBox;
@@ -80,5 +91,11 @@ export default {
   MiAvatar,
   MiTag,
   MiDivider,
-  MiCard
+  MiCard,
+  MiBreadcrumb,
+  MiBreadcrumbItem,
+  MiRow,
+  MiCol,
+  MiProgress,
+  MiLoading
 };

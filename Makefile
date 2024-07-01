@@ -3,29 +3,29 @@
 # 直接运行 make，会执行 default 目标，因为这是文件中的第一个目标 从而执行 help指令
 default: help
 
-# build all theme
-build-theme:
-	npm run build:theme
-
-install-cn:
+install:
 	npm install --registry=http://registry.npm.taobao.org
-
-dev:
-	npm run dev
-
-devplay:
-	npm run dev:play
-
-new:
-	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
-
-buildfile:
-	npm run build:file
 
 dist: install-cn
 	npm run dist
 
-init: new buildfile build-theme
+dev:
+	npm run dev
+
+devp:
+	npm run dev:play
+
+new:
+	node build/bin/new.js $(COMPONENT)
+
+buildfile: new
+	npm run build:file
+
+buildTheme: buildfile
+	npm run build:theme
+
+init: buildTheme
+	@echo '组件初始化已完成...🎉'
 
 help:
 	@echo "   \033[35mmake\033[0m \033[1m命令使用说明\033[0m"
