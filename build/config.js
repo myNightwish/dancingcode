@@ -42,8 +42,10 @@ exports.externals = externals;
 exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
-  examples: path.resolve(__dirname, '../examples'),
-  'mi-ui': path.resolve(__dirname, '../')
+  xamples: path.resolve(__dirname, '../examples'),
+  'mi-ui': path.resolve(__dirname, '../'),
+  Src: path.resolve(__dirname, '../src'),
+  Utils: path.resolve(__dirname, '../src/utils'),
 };
 // 定义 Vue 的模块系统配置，以便在不同模块系统中都可以正确引用 Vue
 exports.vue = {

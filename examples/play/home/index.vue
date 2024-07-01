@@ -58,6 +58,12 @@
         <mi-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple">55</div></mi-col>
         <mi-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light">66</div></mi-col>
     </mi-row>
+    <mi-button @click="showLoading = !showLoading">
+      Toggle Loading
+    </mi-button>
+    <div v-loading="showLoading" style="margin-top: 20px; width: 300px; height: 200px; border: 1px solid #ccc;">
+      Content here
+    </div>
   </div>
 </template>
 
@@ -72,8 +78,14 @@ export default {
         size: 'large',
         closable: true,
         effect: 'plain'
-      }
+      },
+      showLoading: true
     }
+  },
+  watch: {
+      showLoading(val) {
+        console.log(`Loading state changed: ${val}`);
+      }
   },
   methods: {
     handleClick() {

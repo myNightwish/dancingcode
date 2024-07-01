@@ -20,6 +20,7 @@ import MiBreadcrumbItem from '../packages/breadcrumb-item/index.js';
 import MiRow from '../packages/row/index.js';
 import MiCol from '../packages/col/index.js';
 import MiProgress from '../packages/progress/index.js';
+import MiLoading from '../packages/loading/index.js';
 /* 导入组件库所有组件 */
 const components = [
   MiIcon,
@@ -51,12 +52,12 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component);
   });
 
-  /* Vue.use(Loading.directive);
+  Vue.use(MiLoading.directive);
 
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
-  }; */
+  };
 
   /* Vue.prototype.$loading = Loading.service;
   Vue.prototype.$msgbox = MessageBox;
@@ -95,5 +96,6 @@ export default {
   MiBreadcrumbItem,
   MiRow,
   MiCol,
-  MiProgress
+  MiProgress,
+  MiLoading
 };

@@ -343,6 +343,10 @@
             {
               "path": "/progress",
               "title": "Progress"
+            },
+            {
+              "path": "/loading",
+              "title": "Loading"
             }
           ]
         }

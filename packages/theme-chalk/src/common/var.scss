@@ -312,3 +312,10 @@ $--breakpoints-spec: (
   'xl-only' : (min-width: $--xl),
 );
 $--breakpoints-gap: calc(1 / 24);
+
+/* Loading
+--------------------------*/
+/// height||Other|4
+$--loading-spinner-size: 42px !default;
+/// height||Other|4
+$--loading-fullscreen-spinner-size: 50px !default;

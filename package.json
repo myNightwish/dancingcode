@@ -8,7 +8,7 @@
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js",
     "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "dev": "npm run clean && npm run build:file && webpack --config build/webpack.common.js && cross-env NODE_ENV=development webpack serve --config build/webpack.demo.js & node build/bin/template.js",
-    "dev:play": "npm run clean && npm run build:file && cross-env NODE_ENV=development webpack serve --config build/webpack.demo.js && node build/bin/template.js",
+    "dev:play": "npm run clean && cross-env NODE_ENV=development webpack serve --config build/webpack.demo.js && node build/bin/template.js",
     "dist": "npm run clean && npm run build:file && npm run build:theme && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && cross-env NODE_ENV=production webpack --config build/webpack.demo.js",
     "need": "npm run clean && npm run build:file && npm run build:theme && webpack --config build/webpack.component.js",
     "clean": "rimraf lib && rimraf packages/*/lib",
