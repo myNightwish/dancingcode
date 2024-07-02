@@ -351,6 +351,14 @@
             {
               "path": "/message-box",
               "title": "MessageBox"
+            },
+            {
+              "path": "/skeleton",
+              "title": "Skeleton"
+            },
+            {
+              "path": "/skeleton-item",
+              "title": "SkeletonItem"
             }
           ]
         }

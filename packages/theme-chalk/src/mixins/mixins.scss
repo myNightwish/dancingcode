@@ -13,13 +13,17 @@
     }
 }
 @mixin e($element) {
+    // $B: $B: $namespace + '-' + $block !global; =====> "mi-skeleton"; 
+    // $element-separator: "__"; config定义的
     $E: $element !global;
     $selector: &;
     $currentSelector: "";
+    // 循环过程在拼接，得到：".mi-skeleton__item, .mi-skeleton__title, .mi-skeleton__variant"等
     @each $unit in $element {
       $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
     }
-  
+    // function.scss中定义了
+    // todo：暂时不懂为啥这里要分开处理，先放着
     @if hitAllSpecialNestRule($selector) {
       @at-root {
         #{$selector} {

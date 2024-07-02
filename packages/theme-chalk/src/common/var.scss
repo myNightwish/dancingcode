@@ -319,3 +319,12 @@ $--breakpoints-gap: calc(1 / 24);
 $--loading-spinner-size: 42px !default;
 /// height||Other|4
 $--loading-fullscreen-spinner-size: 50px !default;
+
+/* Skeleton 
+--------------------------*/
+$--skeleton-color: #f2f2f2 !default;
+$--skeleton-to-color: #e6e6e6 !default;
+
+/* Svg
+--------------- */
+$--svg-monochrome-grey: #DCDDE0 !default;

@@ -8,7 +8,6 @@
       <mi-button size="medium">中等按钮</mi-button>
       <mi-button type="warning" circle></mi-button>
       <mi-button type="danger" icon="mi-icon-delete">危险按钮</mi-button>
-      <mi-button type="text">文本</mi-button>
   </div>
 </template>
 
