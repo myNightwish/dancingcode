@@ -42,7 +42,7 @@ exports.externals = externals;
 exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
-  xamples: path.resolve(__dirname, '../examples'),
+  examples: path.resolve(__dirname, '../examples'),
   'mi-ui': path.resolve(__dirname, '../'),
   Src: path.resolve(__dirname, '../src'),
   Utils: path.resolve(__dirname, '../src/utils'),
