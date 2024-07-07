@@ -8,7 +8,6 @@
   "col": "./packages/col/index.js",
   "progress": "./packages/progress/index.js",
   "loading": "./packages/loading/index.js",
-  "message-box": "./packages/message-box/index.js",
   "skeleton": "./packages/skeleton/index.js",
   "skeleton-item": "./packages/skeleton-item/index.js"
 }

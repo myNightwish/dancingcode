@@ -68,14 +68,14 @@ ComponentNames.forEach(name => {
     package: name
   }));
 
-  if (['Loading', 'MessageBox', 'Notification', 'Message'].indexOf(componentName) === -1) {
+  if (['MiLoading', 'MiMessageBox', 'MiNotification', 'MiMessage'].indexOf(componentName) === -1) {
     installTemplate.push(render(INSTALL_COMPONENT_TEMPLATE, {
       name: componentName,
       component: name
     }));
   }
 
-  if (componentName !== 'Loading') listTemplate.push(`  ${componentName}`);
+  if (componentName !== 'MiLoading') listTemplate.push(`  ${componentName}`);
 });
 
 var template = render(MAIN_TEMPLATE, {

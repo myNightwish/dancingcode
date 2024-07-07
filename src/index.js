@@ -55,17 +55,16 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 /* 导出install、各个组件 */
 export default {
-    /* 导出的对象必须具有 install，才能被 Vue.use() 方法安装 */
-    install,
-    MiIcon,
-    MiButton,
-    MiRainbow,
-    MiBacktop,
-    MiDivider,
-    MiRow,
-    MiCol,
-    MiProgress,
-    MiLoading,
-    MiSkeleton,
-    MiSkeletonItem
+      /* 导出的对象必须具有 install，才能被 Vue.use() 方法安装 */
+      install,
+        MiIcon,
+  MiButton,
+  MiRainbow,
+  MiBacktop,
+  MiDivider,
+  MiRow,
+  MiCol,
+  MiProgress,
+  MiSkeleton,
+  MiSkeletonItem
 };
