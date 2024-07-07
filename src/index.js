@@ -13,7 +13,7 @@ import MiSkeleton from '../packages/skeleton/index.js';
 import MiSkeletonItem from '../packages/skeleton-item/index.js';
 /* 导入组件库所有组件 */
 const components = [
-      MiIcon,
+  MiIcon,
   MiButton,
   MiRainbow,
   MiBacktop,
@@ -21,7 +21,6 @@ const components = [
   MiRow,
   MiCol,
   MiProgress,
-  MiLoading,
   MiSkeleton,
   MiSkeletonItem
 ];
