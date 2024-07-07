@@ -1,8 +1,12 @@
 {
   "name": "mi-element-ui",
-  "version": "1.0.4-beta",
+  "version": "1.0.4",
   "description": "A Vue.js 2.X UI Toolkit for Web, learning from elementUI from 0 to 1",
   "main": "./lib/mi-element-ui.js",
+  "files": [
+    "lib/",
+    "LICENSE"
+  ],
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js",

@@ -11,10 +11,9 @@ import MiProgress from '../packages/progress/index.js';
 import MiLoading from '../packages/loading/index.js';
 import MiSkeleton from '../packages/skeleton/index.js';
 import MiSkeletonItem from '../packages/skeleton-item/index.js';
-
 /* 导入组件库所有组件 */
 const components = [
-  MiIcon,
+      MiIcon,
   MiButton,
   MiRainbow,
   MiBacktop,
@@ -22,8 +21,9 @@ const components = [
   MiRow,
   MiCol,
   MiProgress,
+  MiLoading,
   MiSkeleton,
-  MiSkeletonItem,
+  MiSkeletonItem
 ];
 
 /* 定义组件库组件注册安装的install方法, 当使用 use 注册插件，则所有的组件都将被注册 */
